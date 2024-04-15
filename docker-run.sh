@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it timothyjmiller/plex-playlist-sync:latest
+docker run -it bazaim/plex-playlist-sync:latest
