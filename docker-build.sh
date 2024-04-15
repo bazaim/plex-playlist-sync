@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --tag timothyjmiller/plex-playlist-sync:latest .
+docker build --tag bazaim/plex-playlist-sync:latest .
