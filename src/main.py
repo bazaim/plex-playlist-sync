@@ -64,6 +64,12 @@ def get_user_tokens(server_id):
 def main():
     plex = PlexServer(PLEX_URL, PLEX_TOKEN)
     plex_users = get_user_tokens(plex.machineIdentifier)
+    
+    if(PLAYLISTS is None):
+        PLAYLISTS = plex.playlists()
+        
+    if(USERS is None):
+        USERS = account.users()
 
     plex_playlists = {playlist.title: playlist.items() for playlist in plex.playlists()}
 
@@ -97,7 +103,7 @@ def main():
     return
 
 if __name__ == "__main__":
-    if(PLEX_URL is None or PLEX_TOKEN is None or PLAYLISTS is None or USERS is None or REPEAT_INTERVAL is None):
+    if(PLEX_URL is None or PLEX_TOKEN is None or REPEAT_INTERVAL is None):
         print("Error: Environment variable(s) not provided.")
     else:
         PLAYLISTS = PLAYLISTS.split(", ")
