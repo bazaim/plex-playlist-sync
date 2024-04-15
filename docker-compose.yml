@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   plex-playlist-sync:
-    image: timothyjmiller/plex-playlist-sync:latest
+    image: bazaim/plex-playlist-sync:latest
     container_name: plex-playlist-sync
     security_opt:
       - no-new-privileges:true
